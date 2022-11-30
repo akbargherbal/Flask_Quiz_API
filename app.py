@@ -18,4 +18,4 @@ def returnjson():
 		return jsonify(quiz_set_flask)
 
 if __name__=='__main__':
-	app.run(debug=True)
+	app.run()
