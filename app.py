@@ -1,5 +1,7 @@
 from flask import Flask,jsonify,request
 import pandas as pd
+import os
+
 file_path = 'VERB_QUIZ_007.csv'
 df = pd.read_csv(file_path, encoding='utf-8')
 
@@ -16,4 +18,4 @@ def ReturnJSON():
 		return jsonify(quiz_set_flask)
 
 if __name__=='__main__':
-	app.run(debug=True)
+	app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
