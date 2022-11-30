@@ -12,7 +12,7 @@ quiz_set_flask = quiz_set_flask.to_dict('records')
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
-def ReturnJSON():
+def returnjson():
 	if(request.method == 'GET'):
 
 		return jsonify(quiz_set_flask)
